@@ -44,22 +44,22 @@
     - name: ethereum
       apt: name=software-properties-common
     - apt_key: keyserver=keyserver.ubuntu.com id=923F6CA9
+    - apt_repository: repo='ppa:ethereum/ethereum-qt'
     - apt_repository: repo='ppa:ethereum/ethereum'
     - apt: pkg={{ item }} state=present
       with_items:
       - ethereum
       - solc
+      - mix
 
     - name: insync
       apt_key: url=https://d2t3ff60b2tol4.cloudfront.net/services@insynchq.com.gpg.key
     - apt_repository: repo='deb http://apt.insynchq.com/ubuntu wily non-free contrib' state=present
     - apt: name=insync state=present
 
+    - name: owncloud
+      apt_key: url=http://download.opensuse.org/repositories/isv:ownCloud:desktop/Ubuntu_15.10/Release.key
+    - apt_repository: repo='deb http://download.opensuse.org/repositories/isv:/ownCloud:/desktop/Ubuntu_15.10/ /' state=present filename='owncloud-client'
+    - apt: name=owncloud-client state=present
 
     # TODO install Google-chome and Dropbox.
-
-
-
-
-
-
