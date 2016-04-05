@@ -33,9 +33,10 @@
       - vagrant
       - shotwell
 
+    # From https://www.elastic.co/blog/apt-and-yum-repositories
     - name: elasticsearch
       apt_key: url=http://packages.elasticsearch.org/GPG-KEY-elasticsearch state=present
-    - apt_repository: repo='deb http://packages.elasticsearch.org/elasticsearch/1.0/debian stable main' state=present
+    - apt_repository: repo='deb http://packages.elasticsearch.org/elasticsearch/2.x/debian stable main' filename='elasticsearch' state=present
     - apt: name=elasticsearch state=present
 
     - name: nodejs
