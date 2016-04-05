@@ -4,9 +4,9 @@
   tasks:
     - name: jdk
       apt: name=openjdk-8-jdk install_recommends=yes state=present
-    
+
     - name: sbt
-      apt_repository: repo='deb https://dl.bintray.com/sbt/debian /' state=present filename='sbt'     
+      apt_repository: repo='deb https://dl.bintray.com/sbt/debian /' state=present filename='sbt'
     - apt_key: keyserver=keyserver.ubuntu.com id=642AC823
     - apt: name=sbt state=present
 
@@ -15,10 +15,24 @@
       apt: pkg={{ item }} state=present
       with_items:
       - postgresql-9.4
+      - postgresql-contrib
+      - pgadmin3
       - ruby
       - ruby-dev
+      - python3-dev
+      - python-dev
       - javascript-common
-      
+      - vlc
+      - filezilla
+
+    - name: common packages with recommends
+      apt: name={{ item }} install_recommends=yes state=present
+      with_items:
+      - keepass2
+      - virtualbox
+      - vagrant
+      - shotwell
+
     - name: elasticsearch
       apt_key: url=http://packages.elasticsearch.org/GPG-KEY-elasticsearch state=present
     - apt_repository: repo='deb http://packages.elasticsearch.org/elasticsearch/1.0/debian stable main' state=present
