@@ -14,9 +14,6 @@
     - name: common packages
       apt: pkg={{ item }} state=present
       with_items:
-      - postgresql-9.4
-      - postgresql-contrib
-      - pgadmin3
       - ruby
       - ruby-dev
       - python3-dev
@@ -24,6 +21,7 @@
       - javascript-common
       - vlc
       - filezilla
+      - nvidia-current
 
     - name: common packages with recommends
       apt: name={{ item }} install_recommends=yes state=present
@@ -64,8 +62,10 @@
     - apt: pkg={{ item }} state=present
       with_items:
       - ethereum
+      - cpp-ethereum
+      - gethminer
       - solc
-      - mix
+      - mix-ide
 
     - name: insync
       apt_key: url=https://d2t3ff60b2tol4.cloudfront.net/services@insynchq.com.gpg.key
@@ -76,5 +76,14 @@
       apt_key: url=http://download.opensuse.org/repositories/isv:ownCloud:desktop/Ubuntu_15.10/Release.key
     - apt_repository: repo='deb http://download.opensuse.org/repositories/isv:/ownCloud:/desktop/Ubuntu_15.10/ /' state=present filename='owncloud-client'
     - apt: name=owncloud-client state=present
+
+    - name: postgresql
+      apt_key: url=https://www.postgresql.org/media/keys/ACCC4CF8.asc
+    - apt_repository: repo='deb http://apt.postgresql.org/pub/repos/apt/ wily-pgdg main' state=present filename='postgresql'
+      apt: name={{ item }} install_recommends=no state=present
+      with_items:
+      - postgresql-9.5
+      - pgadmin3
+      - postgis
 
     # TODO install Google-chome and Dropbox.
