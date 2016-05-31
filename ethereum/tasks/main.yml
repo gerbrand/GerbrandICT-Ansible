@@ -1,0 +1,12 @@
+- name: ethereum
+  apt: name=software-properties-common
+- apt_key: keyserver=keyserver.ubuntu.com id=923F6CA9
+- apt_repository: repo='ppa:ethereum/ethereum-qt'
+- apt_repository: repo='ppa:ethereum/ethereum'
+- name: install_ethereum
+  apt: pkg={{ item }} state=present
+  with_items:
+  - ethereum
+  - cpp-ethereum
+  - solc
+  - mix-ide
