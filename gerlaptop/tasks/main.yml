@@ -29,24 +29,28 @@
 - name: install_mongodb
   apt: name=mongodb-org state=present
 
+- name: shotwell
+  apt_repository: repo='ppa:yg-jensge/shotwell'
+- name: install shotwell
+  apt: name=shotwell state=present
+
 # TODO fails, probably because of / at the end
 #- name: neo4j
 #  apt_key: url=https://debian.neo4j.org/neotechnology.gpg.key
 #- apt_repository: repo='deb http://debian.neo4j.org/repo stable/' state=present filename='neo4j'
 #- apt: name=neo4j state=present
 
-- name: insync
-  apt_key: url=https://d2t3ff60b2tol4.cloudfront.net/services@insynchq.com.gpg.key
-- apt_repository: repo='deb http://apt.insynchq.com/ubuntu xenial non-free contrib' state=present
-- apt: name=insync state=present
+#- name: insync
+#  apt_key: url=https://d2t3ff60b2tol4.cloudfront.net/services@insynchq.com.gpg.key
+#- apt_repository: repo='deb http://apt.insynchq.com/ubuntu xenial non-free contrib' state=present
+#- apt: name=insync state=present
 
-- name: owncloud
-  apt_key: url=http://download.opensuse.org/repositories/isv:ownCloud:desktop/Ubuntu_15.10/Release.key
-- apt_repository: repo='deb http://download.opensuse.org/repositories/isv:/ownCloud:/desktop/Ubuntu_15.10/ /' state=present filename='owncloud-client'
-- apt: name=owncloud-client state=present
+- name: MSfonts
+  apt: name=ttf-mscorefonts-installer state=present
 
-- name: atom
-  apt: deb=https://github.com/atom/atom/releases/download/v1.7.4/atom-amd64.deb
+
+#- name: atom
+#  apt: deb=https://github.com/atom/atom/releases/download/v1.7.4/atom-amd64.deb
 
 #    - name: postgresql
 #      apt_key: url=https://www.postgresql.org/media/keys/ACCC4CF8.asc
@@ -56,5 +60,8 @@
 #      - postgresql-9.5
 #      - pgadmin3
 #      - postgis
+
+- name: mysql-repo
+  apt: deb=https://dev.mysql.com/get/mysql-apt-config_0.7.3-1_all.deb
 
 # TODO install Google-chome and Dropbox.
