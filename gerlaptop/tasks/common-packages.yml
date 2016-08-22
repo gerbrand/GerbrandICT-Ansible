@@ -9,7 +9,6 @@
   - javascript-common
   - vlc
   - filezilla
-  - nvidia-current
 
 - name: common packages with recommends
   apt: name={{ item }} install_recommends=yes state=present
