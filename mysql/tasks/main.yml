@@ -1,0 +1,2 @@
+- name: mysql-repo
+  apt: deb=https://dev.mysql.com/get/mysql-apt-config_0.7.3-1_all.deb

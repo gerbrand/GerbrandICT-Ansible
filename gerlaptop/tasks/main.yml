@@ -1,4 +1,4 @@
-- include: common-packages.yml
+- include: common-pagckages.yml
 
 - name: jdk
   apt: name=openjdk-8-jdk install_recommends=yes state=present
@@ -60,8 +60,5 @@
 #      - postgresql-9.5
 #      - pgadmin3
 #      - postgis
-
-- name: mysql-repo
-  apt: deb=https://dev.mysql.com/get/mysql-apt-config_0.7.3-1_all.deb
 
 # TODO install Google-chome and Dropbox.
