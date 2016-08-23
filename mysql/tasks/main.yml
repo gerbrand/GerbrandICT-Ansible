@@ -1,2 +1,9 @@
 - name: mysql-repo
   apt: deb=https://dev.mysql.com/get/mysql-apt-config_0.7.3-1_all.deb
+
+- name: mysql
+  apt: pkg={{ item }} install_recommends=no state=present
+  with_items:
+  - mysql-client
+  - mysql-server
+  - mysql-workbench
