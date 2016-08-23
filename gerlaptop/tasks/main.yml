@@ -1,13 +1,7 @@
-- include: common-pagckages.yml
+- include: common-packages.yml
 
 - name: jdk
   apt: name=openjdk-8-jdk install_recommends=yes state=present
-
-- name: sbt
-  apt_repository: repo='deb https://dl.bintray.com/sbt/debian /' state=present filename='sbt'
-- apt_key: keyserver=keyserver.ubuntu.com id=642AC823
-- name: install_sbt
-  apt: name=sbt state=present
 
 # From https://www.elastic.co/blog/apt-and-yum-repositories
 - name: elasticsearch
@@ -39,11 +33,6 @@
 #  apt_key: url=https://debian.neo4j.org/neotechnology.gpg.key
 #- apt_repository: repo='deb http://debian.neo4j.org/repo stable/' state=present filename='neo4j'
 #- apt: name=neo4j state=present
-
-#- name: insync
-#  apt_key: url=https://d2t3ff60b2tol4.cloudfront.net/services@insynchq.com.gpg.key
-#- apt_repository: repo='deb http://apt.insynchq.com/ubuntu xenial non-free contrib' state=present
-#- apt: name=insync state=present
 
 - name: MSfonts
   apt: name=ttf-mscorefonts-installer state=present
