@@ -19,12 +19,12 @@
 
 - name: mongodb
   apt_key: keyserver=keyserver.ubuntu.com id=EA312927
-- apt_repository: repo='deb http://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/3.2 multiverse' state=present filename='mongodb-org-3.2'
+- apt_repository: repo='deb http://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/3.2 multiverse' state=present filename='mongodb-org'
 - name: install_mongodb
   apt: name=mongodb-org state=present
 
 - name: shotwell
-  apt_repository: repo='ppa:yg-jensge/shotwell'
+  apt_repository: repo='ppa:yg-jensge/shotwell' state=present filename='shotwell'
 - name: install shotwell
   apt: name=shotwell state=present
 
