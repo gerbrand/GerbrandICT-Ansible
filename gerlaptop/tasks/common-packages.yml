@@ -9,6 +9,8 @@
   - javascript-common
   - vlc
   - filezilla
+  - git
+  - mcedit
 
 - name: common packages with recommends
   apt: name={{ item }} install_recommends=yes state=present
