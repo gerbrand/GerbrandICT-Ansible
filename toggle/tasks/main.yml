@@ -1,0 +1,8 @@
+#https://support.toggl.com/toggl-desktop-for-linux/
+- apt: pkg={{ item }} install_recommends=no state=present
+  with_items:
+  - libgstreamer0.10-dev
+  - libgstreamer-plugins-base0.10-dev
+
+- name: toggl
+  apt: deb=https://toggl.com/api/v8/installer?app=td&platform=deb64&channel=stable
