@@ -2,6 +2,7 @@
   sudo: yes
   apt: pkg={{ item }} install_recommends=no state=present
   with_items:
+  - build-essential
   - ruby
   - ruby-dev
   - python3-dev
@@ -11,6 +12,9 @@
   - filezilla
   - git
   - mcedit
+  - ubuntu-dev-tools
+  - gnu-standards
+  - libtool
 
 - name: common packages with recommends
   apt: name={{ item }} install_recommends=yes state=present
