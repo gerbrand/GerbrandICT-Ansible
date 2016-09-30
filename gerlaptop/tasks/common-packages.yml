@@ -15,6 +15,7 @@
   - ubuntu-dev-tools
   - gnu-standards
   - libtool
+  - nmap
 
 - name: common packages with recommends
   apt: name={{ item }} install_recommends=yes state=present
