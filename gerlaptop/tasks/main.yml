@@ -1,5 +1,11 @@
 - include: common-packages.yml
 
+- apt_key: url=http://dl.yarnpkg.com/debian/pubkey.gpg
+
+- apt_repository: repo='deb http://dl.yarnpkg.com/debian/ stable main' state=present filename='yarn'
+
+- apt: name=yarn state=present
+
 - name: jdk
   apt: name=openjdk-8-jdk install_recommends=yes state=present
 
@@ -42,7 +48,7 @@
 #  apt: deb=https://github.com/atom/atom/releases/download/v1.7.4/atom-amd64.deb
 
 #    - name: postgresql
-#      apt_key: url=https://www.postgresql.org/media/keys/ACCC4CF8.asc
+#      apt_key: url=https://www.postgresql.org/media/keys/ACCC4CF8.asc state=present
 #    - apt_repository: repo='deb http://apt.postgresql.org/pub/repos/apt/ xenial-pgdg main' state=present filename='postgresql'
 #      apt: name={{ item }} install_recommends=no state=present
 #      with_items:
