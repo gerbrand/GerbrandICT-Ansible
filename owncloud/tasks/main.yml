@@ -1,5 +1,5 @@
 - name: owncloud
-  apt_key: url=http://download.opensuse.org/repositories/isv:ownCloud:desktop/Ubuntu_16.04/Release.key
+  apt_key: url='https://owncloud.org/wp-content/themes/owncloudorgnew/assets/files/obs-release-signing.gpg'
 
 - apt_repository: repo='deb http://download.opensuse.org/repositories/isv:/ownCloud:/desktop/Ubuntu_16.04/ /' state=present filename='owncloud'
 
