@@ -1,8 +1,21 @@
 ---
 - hosts: gerlaptops
+  become_method: sudo
+  become_user: root
   roles:
     - gerlaptop
     - insync
     - owncloud
     - mysql
     - sbt
+    - ethereum
+    - mono
+    - btsync
+- hosts: gerservers
+  roles:
+#    - owncloud
+#    - mysql
+    - postgresql
+  #  - ethereum
+    - btsync
+    - nodejs
