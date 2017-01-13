@@ -28,10 +28,10 @@ galaxy_info:
     # alphanumeric characters. Maximum 20 tags per role.
 
 dependencies:
-    - { role: '../roles/owncloud' }
-    - { role: '../roles/mysql' }
-    - { role: '../roles/sbt' }
-    - { role: '../roles/ethereum' }
-    - { role: '../roles/mono' }
-    - { role: '../btsync' }
-    - { role: '../insync' }
+    - { role: 'roles/owncloud' }
+    - { role: 'roles/mysql' }
+    - { role: 'roles/sbt' }
+    - { role: 'roles/ethereum' }
+    - { role: 'roles/mono' }
+    - { role: 'btsync' }
+    - { role: 'insync' }
