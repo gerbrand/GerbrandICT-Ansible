@@ -29,6 +29,7 @@ galaxy_info:
 
 dependencies:
   - src: git+https://github.com/PlutusIt/plutus-ansible-roles.git
+    scm: git
     name: roles
 
 #  - { role: 'plutus-ansible-roles/owncloud' }
