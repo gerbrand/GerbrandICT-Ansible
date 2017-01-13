@@ -3,19 +3,14 @@
   become_method: sudo
   become_user: root
   roles:
-    - gerlaptop
-    - insync
-    - owncloud
-    - mysql
-    - sbt
-    - ethereum
-    - mono
-    - btsync
+   - { role: gerbrands-laptop }
+
 - hosts: gerservers
   roles:
-#    - owncloud
+#    - syncthing
+    - owncloud
 #    - mysql
     - postgresql
-  #  - ethereum
+#  - ethereum
     - btsync
     - nodejs
