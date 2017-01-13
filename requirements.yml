@@ -1,3 +1,2 @@
 - name: roles
-  src: https://github.com/PlutusIt/plutus-ansible-roles.git  
-  scm: git
+  src: https://github.com/PlutusIt/plutus-ansible-roles.git
