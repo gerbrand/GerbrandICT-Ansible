@@ -9,7 +9,7 @@ galaxy_info:
 
   license: license GPLv3
 
-  min_ansible_version: 2.2
+#   min_ansible_version: 2.2
 
   github_branch: master
 
@@ -30,8 +30,7 @@ galaxy_info:
 dependencies:
   - src: https://github.com/PlutusIt/plutus-ansible-roles
     version: master
-    name: roles
-
+  
 #  - { role: 'plutus-ansible-roles/owncloud' }
 #  - { role: 'plutus-ansible-roles/mysql' }
 #  - { role: 'plutus-ansible-roles/sbt' }
