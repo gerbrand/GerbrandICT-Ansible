@@ -44,8 +44,10 @@
   apt: name=ttf-mscorefonts-installer state=present
 
 
-#- name: atom
-#  apt: deb=https://github.com/atom/atom/releases/download/v1.7.4/atom-amd64.deb
+- name: atom
+  apt_repository: repo='ppa:webupd8team/atom' state=present filename='atom'
+
+- apt: name=atom state=present
 
 #    - name: postgresql
 #      apt_key: url=https://www.postgresql.org/media/keys/ACCC4CF8.asc state=present
