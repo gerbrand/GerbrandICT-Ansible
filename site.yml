@@ -8,9 +8,9 @@
 - hosts: gerservers
   roles:
 #    - syncthing
-    - owncloud
+    - plutus-ansible-roles/owncloud
 #    - mysql
-    - postgresql
+    - plutus-ansible-roles/postgresql
 #  - ethereum
     - btsync
-    - nodejs
+    - plutus-ansible-roles/nodejs
