@@ -28,9 +28,7 @@ galaxy_info:
     # alphanumeric characters. Maximum 20 tags per role.
 
 dependencies:
-  - src: git+https://github.com/PlutusIt/plutus-ansible-roles.git
-    version: master
-    name: allisbroken.roles
+  - { role: 'https://github.com/PlutusIt/plutus-ansible-roles' }
 
 #  - { role: 'plutus-ansible-roles/owncloud' }
 #  - { role: 'plutus-ansible-roles/mysql' }
