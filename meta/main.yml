@@ -28,11 +28,13 @@ galaxy_info:
     # alphanumeric characters. Maximum 20 tags per role.
 
 dependencies:
-  - { role: 'https://github.com/PlutusIt/plutus-ansible-roles' }
-#    - { role: 'plutus-ansible-roles/owncloud' }
-#    - { role: 'plutus-ansible-roles/mysql' }
-#    - { role: 'plutus-ansible-roles/sbt' }
-#    - { role: 'plutus-ansible-roles/ethereum' }
-#    - { role: 'plutus-ansible-roles/mono' }
-#    - { role: 'btsync' }
-#    - { role: 'insync' }
+  - src: git:https://github.com/PlutusIt/plutus-ansible-roles.git
+    name: roles
+
+#  - { role: 'plutus-ansible-roles/owncloud' }
+#  - { role: 'plutus-ansible-roles/mysql' }
+#  - { role: 'plutus-ansible-roles/sbt' }
+#  - { role: 'plutus-ansible-roles/ethereum' }
+#  - { role: 'plutus-ansible-roles/mono' }
+#  - { role: 'btsync' }
+#  - { role: 'insync' }
