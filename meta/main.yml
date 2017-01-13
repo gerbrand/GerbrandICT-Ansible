@@ -30,7 +30,8 @@ galaxy_info:
 dependencies:
   - src: https://github.com/PlutusIt/plutus-ansible-roles
     version: master
-  
+    name: roles
+
 #  - { role: 'plutus-ansible-roles/owncloud' }
 #  - { role: 'plutus-ansible-roles/mysql' }
 #  - { role: 'plutus-ansible-roles/sbt' }
