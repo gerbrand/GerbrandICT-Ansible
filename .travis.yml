@@ -11,6 +11,10 @@ addons:
     packages:
     - python-pip
 
+before_install:
+    - git submodule sync
+    - git submodule update --init
+
 install:
   # Install ansible
   - pip install ansible
