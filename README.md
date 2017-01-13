@@ -12,3 +12,11 @@ Amongst others
 * Detect release automatically. Saves me from changing the project after each new release of ubuntu
 * Install/update/tweak configuration. Probably using dconf
 * Read https://blog.josephkahn.io/articles/ansible/ , found this after I started this project
+
+# Development
+Test ansible-galaxy using:
+- ansible-galaxy install -r requirements.yml -p /tmp/
+- cd /tmp
+
+Run locally using
+- galaxy-playbook install site.yml -l mylaptop
